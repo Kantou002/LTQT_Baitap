@@ -1,0 +1,51 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Bb]in/
+[Oo]bj/
+*.exe
+*.dll
+*.pdb
+*.cache
+*.log
+
+# NuGet
+*.nupkg
+packages/
+*.snupkg
+
+# Entity Framework
+Migrations/
+
+# Visual Studio Code
+.vscode/
+
+# Others
+_ReSharper*/
+*.resharper
+*.DotSettings.user
+*.dbmdl
+*.bak
+*.sql
+*.mdf
+*.ldf
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# User-specific files
+*.swp
+*.swo
+
+# Local test results
+TestResults/
+
+# Publish
+publish/
+out/
