@@ -28,7 +28,8 @@ namespace QuanLyBanHang
         {
             dataGridView.AutoGenerateColumns = false;
 
-            List<DanhSachHoaDon> hd = context.HoaDon.Select(r => new DanhSachHoaDon
+            List<DanhSachHoaDon> hd = new List<DanhSachHoaDon>();
+            hd = context.HoaDon.Select(r => new DanhSachHoaDon
             {
                 ID = r.ID,
                 NhanVienID = r.NhanVienID,
@@ -96,6 +97,15 @@ namespace QuanLyBanHang
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnLapHoaDon_Click_1(object sender, EventArgs e)
+        {
+            using (frmHoaDon_ChiTiet chiTiet = new frmHoaDon_ChiTiet())
+            {
+                chiTiet.ShowDialog();
+            }
+            frmHoaDon_Load(sender, e); // Tải lại dữ liệu
         }
     }
 }
