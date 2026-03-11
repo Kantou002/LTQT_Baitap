@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             groupBox1 = new GroupBox();
             tableLayoutPanel1 = new TableLayoutPanel();
             tableLayoutPanel2 = new TableLayoutPanel();
@@ -329,7 +329,6 @@
             btnThoat.TabIndex = 2;
             btnThoat.Text = "Thoát";
             btnThoat.UseVisualStyleBackColor = true;
-            btnThoat.Click += btnThoat_Click;
             // 
             // fileSystemWatcher1
             // 
@@ -510,25 +509,25 @@
             // DonGiaBan
             // 
             DonGiaBan.DataPropertyName = "DonGiaBan";
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleRight;
-            DonGiaBan.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleRight;
+            DonGiaBan.DefaultCellStyle = dataGridViewCellStyle4;
             DonGiaBan.HeaderText = "Đơn giá bán";
             DonGiaBan.Name = "DonGiaBan";
             // 
             // SoLuongBan
             // 
             SoLuongBan.DataPropertyName = "SoLuongBan";
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleRight;
-            SoLuongBan.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleRight;
+            SoLuongBan.DefaultCellStyle = dataGridViewCellStyle5;
             SoLuongBan.HeaderText = "Số lượng bán";
             SoLuongBan.Name = "SoLuongBan";
             // 
             // ThanhTien
             // 
             ThanhTien.DataPropertyName = "ThanhTien";
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle3.ForeColor = Color.Blue;
-            ThanhTien.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle6.ForeColor = Color.Blue;
+            ThanhTien.DefaultCellStyle = dataGridViewCellStyle6;
             ThanhTien.HeaderText = "Thành tiền";
             ThanhTien.Name = "ThanhTien";
             // 

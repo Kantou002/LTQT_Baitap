@@ -46,6 +46,9 @@
             btnXoa = new Button();
             btnSua = new Button();
             btnThem = new Button();
+            tableLayoutPanel5 = new TableLayoutPanel();
+            btnXuat = new Button();
+            btnNhap = new Button();
             tableLayoutPanel1.SuspendLayout();
             groupBox1.SuspendLayout();
             tableLayoutPanel3.SuspendLayout();
@@ -54,6 +57,7 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
             tableLayoutPanel2.SuspendLayout();
             panel1.SuspendLayout();
+            tableLayoutPanel5.SuspendLayout();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -200,6 +204,7 @@
             tableLayoutPanel2.ColumnCount = 2;
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25.3886013F));
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 74.6114F));
+            tableLayoutPanel2.Controls.Add(tableLayoutPanel5, 0, 1);
             tableLayoutPanel2.Controls.Add(label1, 0, 0);
             tableLayoutPanel2.Controls.Add(txtTenHangSanXuat, 1, 0);
             tableLayoutPanel2.Controls.Add(panel1, 1, 1);
@@ -314,6 +319,46 @@
             btnThem.UseVisualStyleBackColor = true;
             btnThem.Click += btnThem_Click;
             // 
+            // tableLayoutPanel5
+            // 
+            tableLayoutPanel5.ColumnCount = 2;
+            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel5.Controls.Add(btnXuat, 1, 0);
+            tableLayoutPanel5.Controls.Add(btnNhap, 0, 0);
+            tableLayoutPanel5.Dock = DockStyle.Fill;
+            tableLayoutPanel5.Location = new Point(3, 38);
+            tableLayoutPanel5.Name = "tableLayoutPanel5";
+            tableLayoutPanel5.RowCount = 1;
+            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel5.Size = new Size(190, 29);
+            tableLayoutPanel5.TabIndex = 3;
+            // 
+            // btnXuat
+            // 
+            btnXuat.Dock = DockStyle.Fill;
+            btnXuat.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnXuat.Location = new Point(98, 3);
+            btnXuat.Name = "btnXuat";
+            btnXuat.Size = new Size(89, 23);
+            btnXuat.TabIndex = 3;
+            btnXuat.Text = "Xuất";
+            btnXuat.UseVisualStyleBackColor = true;
+            btnXuat.Click += btnXuat_Click;
+            // 
+            // btnNhap
+            // 
+            btnNhap.Dock = DockStyle.Fill;
+            btnNhap.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnNhap.Location = new Point(3, 3);
+            btnNhap.Name = "btnNhap";
+            btnNhap.Size = new Size(89, 23);
+            btnNhap.TabIndex = 2;
+            btnNhap.Text = "Nhập";
+            btnNhap.UseVisualStyleBackColor = true;
+            btnNhap.Click += btnNhap_Click;
+            // 
             // frmHangSanXuat
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -332,6 +377,7 @@
             tableLayoutPanel2.ResumeLayout(false);
             tableLayoutPanel2.PerformLayout();
             panel1.ResumeLayout(false);
+            tableLayoutPanel5.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -355,5 +401,8 @@
         private DataGridView dataGridView;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn TenHangSanXuat;
+        private TableLayoutPanel tableLayoutPanel5;
+        private Button btnXuat;
+        private Button btnNhap;
     }
 }
