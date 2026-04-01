@@ -1,4 +1,4 @@
-﻿namespace QuanLyBanHang.Forms
+namespace QuanLyBanHang.Forms
 {
     partial class FrmHoaDon
     {
@@ -47,6 +47,8 @@
             btnTimKiem = new Button();
             btnNhap = new Button();
             groupBox2.SuspendLayout();
+            helpProvider1 = new HelpProvider();
+            helpProvider1.HelpNamespace = @"..\Help\HuongDanSuDung.html";
             ((System.ComponentModel.ISupportInitialize)dgvHoaDon).BeginInit();
             SuspendLayout();
             // 
@@ -245,6 +247,9 @@
             Load += FrmHoaDon_Load;
             groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvHoaDon).EndInit();
+
+            helpProvider1.SetHelpKeyword(this, "hoadon");
+            helpProvider1.SetHelpNavigator(this, HelpNavigator.Topic);
             ResumeLayout(false);
         }
 
@@ -266,5 +271,6 @@
         private DataGridViewTextBoxColumn TongTienHoaDon;
         private DataGridViewLinkColumn XemChiTiet;
         private Button btnNhap;
+        private HelpProvider helpProvider1;
     }
 }

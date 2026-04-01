@@ -1,4 +1,4 @@
-﻿namespace QuanLyBanHang.Forms
+namespace QuanLyBanHang.Forms
 {
     partial class FrmKhachHang
     {
@@ -51,6 +51,8 @@
             DiaChi = new DataGridViewTextBoxColumn();
             DienThoai = new DataGridViewTextBoxColumn();
             groupBox1.SuspendLayout();
+            helpProvider1 = new HelpProvider();
+            helpProvider1.HelpNamespace = @"..\Help\HuongDanSuDung.html";
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvKhachHang).BeginInit();
             SuspendLayout();
@@ -300,6 +302,9 @@
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvKhachHang).EndInit();
+
+            helpProvider1.SetHelpKeyword(this, "khachhang");
+            helpProvider1.SetHelpNavigator(this, HelpNavigator.Topic);
             ResumeLayout(false);
         }
 
@@ -327,5 +332,6 @@
         private DataGridViewTextBoxColumn HoVaTen;
         private DataGridViewTextBoxColumn DiaChi;
         private DataGridViewTextBoxColumn DienThoai;
+        private HelpProvider helpProvider1;
     }
 }

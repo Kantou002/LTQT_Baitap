@@ -1,4 +1,4 @@
-﻿namespace QuanLyBanHang.Forms
+namespace QuanLyBanHang.Forms
 {
     partial class FrmDangNhap
     {
@@ -38,6 +38,8 @@
             pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
+            helpProvider1 = new HelpProvider();
+            helpProvider1.HelpNamespace = @"..\Help\HuongDanSuDung.html";
             // 
             // label1
             // 
@@ -133,6 +135,9 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmDangNhap";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+
+            helpProvider1.SetHelpKeyword(this, "dangnhap");
+            helpProvider1.SetHelpNavigator(this, HelpNavigator.Topic);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -147,5 +152,6 @@
         private Button btnDangNhap;
         private Button btnHuyBo;
         private PictureBox pictureBox1;
+        private HelpProvider helpProvider1;
     }
 }

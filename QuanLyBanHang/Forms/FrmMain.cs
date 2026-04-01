@@ -1,4 +1,5 @@
-﻿using System;
+using System.IO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -266,7 +267,28 @@ namespace QuanLyBanHang.Forms
 
         private void mnuThoat_Click(object sender, EventArgs e)
         {
+            Application.Exit();
+        }
 
+        private void mnuHuongDanSudung_Click(object sender, EventArgs e)
+        {
+            string helpFile = Path.Combine(Application.StartupPath, @"Help\HuongDanSuDung.html");
+            if (!File.Exists(helpFile))
+                helpFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\Help\HuongDanSuDung.html");
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+            {
+                FileName = helpFile,
+                UseShellExecute = true
+            });
+        }
+
+        private void mnuThongTinPhanMem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(
+                "Phần mềm Quản Lý Bán Hàng\nPhiên bản: 2.0\n\n© 2024 Khoa Công nghệ thông tin\nTrường Đại học An Giang\nhttps://fit.agu.edu.vn",
+                "Thông tin phần mềm",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
         }
 
         private void mnuThongKeSanPham_Click(object sender, EventArgs e)
@@ -292,5 +314,18 @@ namespace QuanLyBanHang.Forms
             }
             else thongKeDoanhThu.Activate();
         }
+        protected override void OnHelpRequested(HelpEventArgs hevent)
+        {
+            string helpFile = Path.Combine(Application.StartupPath, @"Help\HuongDanSuDung.html#tongquan");
+            if (!File.Exists(helpFile))
+                helpFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\Help\HuongDanSuDung.html#tongquan");
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+            {
+                FileName = helpFile,
+                UseShellExecute = true
+            });
+            hevent.Handled = true;
+        }
+
     }
 }

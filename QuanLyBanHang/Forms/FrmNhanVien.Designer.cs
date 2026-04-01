@@ -1,4 +1,4 @@
-﻿namespace QuanLyBanHang.Forms
+namespace QuanLyBanHang.Forms
 {
     partial class FrmNhanVien
     {
@@ -61,6 +61,8 @@
             cboQuyenHan = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dgvNhanVien).BeginInit();
             groupBox2.SuspendLayout();
+            helpProvider1 = new HelpProvider();
+            helpProvider1.HelpNamespace = @"..\Help\HuongDanSuDung.html";
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -388,6 +390,9 @@
             groupBox2.ResumeLayout(false);
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+
+            helpProvider1.SetHelpKeyword(this, "nhanvien");
+            helpProvider1.SetHelpNavigator(this, HelpNavigator.Topic);
             ResumeLayout(false);
         }
 
@@ -424,5 +429,6 @@
         private Button btnSua;
         private Button btnLuu;
         private Button btnThem;
+        private HelpProvider helpProvider1;
     }
 }

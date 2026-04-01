@@ -41,6 +41,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Help\HuongDanSuDung.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="Reports\QLBHDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>QLBHDataSet.Designer.cs</LastGenOutput>

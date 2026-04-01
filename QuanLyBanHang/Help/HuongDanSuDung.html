@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hướng Dẫn Sử Dụng – Phần Mềm Quản Lý Bán Hàng</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; background: #f5f7fa; color: #222; }
+    header {
+      background: linear-gradient(135deg, #1565C0, #42A5F5);
+      color: #fff; padding: 30px 40px;
+      display: flex; align-items: center; gap: 20px;
+    }
+    header img { width: 60px; height: 60px; }
+    header h1 { font-size: 26px; font-weight: 700; }
+    header p { font-size: 13px; opacity: 0.85; margin-top: 4px; }
+    .container { display: flex; min-height: calc(100vh - 120px); }
+    nav {
+      width: 240px; background: #1e2a3a; color: #cdd7e3;
+      padding: 20px 0; flex-shrink: 0; position: sticky; top: 0; height: 100vh; overflow-y: auto;
+    }
+    nav h3 { font-size: 11px; text-transform: uppercase; letter-spacing: 1px;
+              color: #7a8fa6; padding: 12px 20px 6px; }
+    nav a {
+      display: block; padding: 9px 20px; font-size: 14px;
+      color: #cdd7e3; text-decoration: none; border-left: 3px solid transparent;
+      transition: all .2s;
+    }
+    nav a:hover, nav a.active {
+      background: #253347; color: #fff; border-left-color: #42A5F5;
+    }
+    main { flex: 1; padding: 40px; max-width: 900px; }
+    section { margin-bottom: 50px; scroll-margin-top: 20px; }
+    h2 {
+      font-size: 22px; color: #1565C0; border-bottom: 2px solid #e3ecf7;
+      padding-bottom: 8px; margin-bottom: 18px;
+    }
+    h3 { font-size: 16px; color: #1976D2; margin: 22px 0 10px; }
+    p, li { font-size: 14px; line-height: 1.8; color: #333; }
+    ul, ol { padding-left: 24px; margin: 8px 0; }
+    .card {
+      background: #fff; border: 1px solid #dde4ee; border-radius: 8px;
+      padding: 18px 22px; margin: 14px 0; box-shadow: 0 1px 4px rgba(0,0,0,.06);
+    }
+    .tip {
+      background: #e8f4fd; border-left: 4px solid #42A5F5;
+      border-radius: 0 6px 6px 0; padding: 10px 16px; margin: 12px 0; font-size: 13px;
+    }
+    .warn {
+      background: #fff8e1; border-left: 4px solid #FFA726;
+      border-radius: 0 6px 6px 0; padding: 10px 16px; margin: 12px 0; font-size: 13px;
+    }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; margin: 12px 0; }
+    th { background: #1565C0; color: #fff; padding: 10px 14px; text-align: left; }
+    td { padding: 9px 14px; border-bottom: 1px solid #e8ecf2; }
+    tr:nth-child(even) td { background: #f5f8fc; }
+    kbd {
+      background: #eef0f3; border: 1px solid #c5cad3; border-radius: 4px;
+      padding: 2px 7px; font-size: 12px; font-family: monospace;
+    }
+    footer {
+      background: #1e2a3a; color: #7a8fa6; text-align: center;
+      padding: 18px; font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>📦 Phần Mềm Quản Lý Bán Hàng</h1>
+    <p>Hướng dẫn sử dụng – Phiên bản 2.0 &nbsp;|&nbsp; © 2024 FIT – AGU</p>
+  </div>
+</header>
+
+<div class="container">
+  <!-- ===== NAV ===== -->
+  <nav>
+    <h3>Mục lục</h3>
+    <a href="#tongquan">1. Tổng quan</a>
+    <a href="#dangnhap">2. Đăng nhập / Đăng xuất</a>
+    <a href="#quanly">3. Phân hệ Quản lý</a>
+    <a href="#loaisanpham">  ↳ Loại Sản Phẩm</a>
+    <a href="#hangsanxuat">  ↳ Hãng Sản Xuất</a>
+    <a href="#sanpham">  ↳ Sản Phẩm</a>
+    <a href="#khachhang">  ↳ Khách Hàng</a>
+    <a href="#nhanvien">  ↳ Nhân Viên</a>
+    <a href="#hoadon">4. Hóa Đơn Bán Hàng</a>
+    <a href="#baocao">5. Báo Cáo – Thống Kê</a>
+    <a href="#phimtat">6. Phím Tắt</a>
+    <a href="#lienhe">7. Liên hệ hỗ trợ</a>
+  </nav>
+
+  <!-- ===== MAIN ===== -->
+  <main>
+
+    <!-- 1 -->
+    <section id="tongquan">
+      <h2>1. Tổng Quan</h2>
+      <p>Phần mềm <strong>Quản Lý Bán Hàng</strong> giúp doanh nghiệp quản lý toàn bộ nghiệp vụ bán hàng, từ danh mục hàng hóa, khách hàng, nhân viên đến hóa đơn và báo cáo doanh thu.</p>
+      <div class="card">
+        <h3>Yêu cầu hệ thống</h3>
+        <ul>
+          <li>Hệ điều hành: Windows 10/11 (64-bit)</li>
+          <li>Framework: .NET 8.0 Windows Runtime</li>
+          <li>Database: SQL Server / SQL Server Express</li>
+          <li>RAM tối thiểu: 4 GB | Dung lượng ổ đĩa: 200 MB</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Cấu trúc giao diện chính</h3>
+        <ul>
+          <li><strong>Thanh menu:</strong> Hệ thống | Quản lý | Báo cáo – Thống kê | Trợ giúp</li>
+          <li><strong>Vùng làm việc MDI:</strong> Các form nghiệp vụ mở trong vùng này</li>
+          <li><strong>Thanh trạng thái:</strong> Hiển thị tên người dùng đang đăng nhập và quyền hạn</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 2 -->
+    <section id="dangnhap">
+      <h2>2. Đăng Nhập / Đăng Xuất</h2>
+      <h3>Đăng nhập</h3>
+      <ol>
+        <li>Vào menu <strong>Hệ thống → Đăng nhập</strong> (hoặc khi khởi động chương trình, hộp thoại tự xuất hiện).</li>
+        <li>Nhập <strong>Tên đăng nhập</strong> và <strong>Mật khẩu</strong>.</li>
+        <li>Nhấn nút <strong>Đăng nhập</strong> hoặc bấm <kbd>Enter</kbd>.</li>
+      </ol>
+      <div class="tip">💡 Tên đăng nhập và mật khẩu phân biệt chữ hoa / thường. Liên hệ quản lý nếu quên mật khẩu.</div>
+      <h3>Phân quyền</h3>
+      <table>
+        <tr><th>Quyền</th><th>Chức năng được phép</th></tr>
+        <tr><td>Quản lý</td><td>Toàn bộ tính năng: danh mục, nhân viên, hóa đơn, báo cáo</td></tr>
+        <tr><td>Nhân viên</td><td>Khách hàng, hóa đơn, báo cáo (không quản lý danh mục & nhân viên)</td></tr>
+      </table>
+      <h3>Đăng xuất</h3>
+      <p>Vào menu <strong>Hệ thống → Đăng xuất</strong>. Tất cả form con sẽ đóng và hệ thống về trạng thái "Chưa đăng nhập".</p>
+      <h3>Đổi mật khẩu</h3>
+      <p>Vào menu <strong>Hệ thống → Đổi mật khẩu</strong> sau khi đã đăng nhập.</p>
+    </section>
+
+    <!-- 3 -->
+    <section id="quanly">
+      <h2>3. Phân Hệ Quản Lý</h2>
+      <p>Truy cập qua menu <strong>Quản lý</strong>. Mỗi form danh mục có các nút chức năng sau:</p>
+      <div class="card">
+        <table>
+          <tr><th>Nút</th><th>Chức năng</th></tr>
+          <tr><td>➕ Thêm</td><td>Kích hoạt chế độ nhập dữ liệu mới</td></tr>
+          <tr><td>✏️ Sửa</td><td>Kích hoạt chế độ chỉnh sửa bản ghi đang chọn</td></tr>
+          <tr><td>💾 Lưu</td><td>Ghi dữ liệu vào cơ sở dữ liệu</td></tr>
+          <tr><td>🚫 Hủy bỏ</td><td>Hủy thao tác đang thực hiện</td></tr>
+          <tr><td>🗑️ Xóa</td><td>Xóa bản ghi đang chọn (có xác nhận)</td></tr>
+          <tr><td>📤 Xuất</td><td>Xuất danh sách ra file Excel (.xlsx)</td></tr>
+          <tr><td>📥 Nhập</td><td>Nhập dữ liệu từ file Excel (.xlsx)</td></tr>
+          <tr><td>🚪 Thoát</td><td>Đóng form</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="loaisanpham">
+      <h2>↳ Loại Sản Phẩm</h2>
+      <p>Quản lý các nhóm phân loại sản phẩm (ví dụ: Điện thoại, Máy tính bảng, Laptop…).</p>
+      <ol>
+        <li>Chọn <strong>Quản lý → Loại Sản Phẩm</strong>.</li>
+        <li>Nhấn <strong>Thêm</strong>, nhập <em>Tên loại</em> rồi nhấn <strong>Lưu</strong>.</li>
+        <li>Để sửa: chọn dòng trên lưới → nhấn <strong>Sửa</strong> → chỉnh sửa → <strong>Lưu</strong>.</li>
+      </ol>
+      <div class="warn">⚠️ Không thể xóa loại sản phẩm đang có sản phẩm liên kết.</div>
+    </section>
+
+    <section id="hangsanxuat">
+      <h2>↳ Hãng Sản Xuất</h2>
+      <p>Quản lý thông tin nhà sản xuất / thương hiệu (Samsung, Apple, Dell…).</p>
+      <ol>
+        <li>Chọn <strong>Quản lý → Hãng Sản Xuất</strong>.</li>
+        <li>Thao tác Thêm / Sửa / Xóa tương tự <em>Loại Sản Phẩm</em>.</li>
+      </ol>
+    </section>
+
+    <section id="sanpham">
+      <h2>↳ Sản Phẩm</h2>
+      <p>Quản lý thông tin chi tiết sản phẩm: mã, tên, loại, hãng, giá, hình ảnh, số lượng tồn kho.</p>
+      <ol>
+        <li>Chọn <strong>Quản lý → Sản Phẩm</strong>.</li>
+        <li>Nhấn <strong>Thêm</strong> và điền đầy đủ thông tin.</li>
+        <li>Để chọn hình ảnh: nhấn nút <strong>Chọn ảnh</strong>, duyệt tới file ảnh (JPG/PNG).</li>
+        <li>Nhấn <strong>Lưu</strong> để ghi vào CSDL.</li>
+      </ol>
+      <div class="tip">💡 Dùng chức năng <strong>Xuất Excel</strong> để in danh sách hàng tồn kho.</div>
+    </section>
+
+    <section id="khachhang">
+      <h2>↳ Khách Hàng</h2>
+      <p>Quản lý thông tin khách hàng: họ tên, điện thoại, địa chỉ, email.</p>
+      <ol>
+        <li>Chọn <strong>Quản lý → Khách Hàng</strong>.</li>
+        <li>Thêm / Sửa / Xóa thông tin khách hàng theo quy trình thông thường.</li>
+        <li>Dùng ô <strong>Tìm kiếm</strong> để lọc nhanh theo tên hoặc số điện thoại.</li>
+      </ol>
+    </section>
+
+    <section id="nhanvien">
+      <h2>↳ Nhân Viên</h2>
+      <p>Quản lý tài khoản và thông tin nhân viên. <em>Chỉ Quản lý mới có quyền truy cập.</em></p>
+      <ol>
+        <li>Chọn <strong>Quản lý → Nhân Viên</strong>.</li>
+        <li>Nhấn <strong>Thêm</strong>, nhập đầy đủ thông tin và đặt mật khẩu ban đầu.</li>
+        <li>Tích ô <strong>Quyền hạn</strong> nếu nhân viên là Quản lý.</li>
+      </ol>
+      <div class="warn">⚠️ Không thể xóa tài khoản đang được đăng nhập hoặc đã có hóa đơn liên kết.</div>
+    </section>
+
+    <!-- 4 -->
+    <section id="hoadon">
+      <h2>4. Hóa Đơn Bán Hàng</h2>
+      <ol>
+        <li>Chọn <strong>Quản lý → Hóa Đơn Bán Hàng</strong>.</li>
+        <li>Nhấn <strong>Thêm hóa đơn</strong> để tạo hóa đơn mới.</li>
+        <li>Chọn <strong>Khách hàng</strong> từ danh sách.</li>
+        <li>Nhấn <strong>Thêm sản phẩm</strong> để thêm dòng chi tiết, chọn sản phẩm và nhập số lượng.</li>
+        <li>Hệ thống tự tính thành tiền và tổng cộng.</li>
+        <li>Nhấn <strong>Lưu</strong> để xác nhận hóa đơn.</li>
+        <li>Nhấn <strong>In hóa đơn</strong> để xuất báo cáo in.</li>
+      </ol>
+      <div class="tip">💡 Chức năng <strong>In hóa đơn</strong> sử dụng ReportViewer, có thể xuất ra PDF hoặc in trực tiếp.</div>
+    </section>
+
+    <!-- 5 -->
+    <section id="baocao">
+      <h2>5. Báo Cáo – Thống Kê</h2>
+      <div class="card">
+        <h3>Thống kê sản phẩm</h3>
+        <p>Xem danh sách sản phẩm bán chạy, số lượng bán trong kỳ. Lọc theo khoảng thời gian và loại sản phẩm.</p>
+      </div>
+      <div class="card">
+        <h3>Thống kê doanh thu</h3>
+        <p>Tổng doanh thu theo ngày / tháng / năm. Hỗ trợ xuất báo cáo ra Excel để phân tích thêm.</p>
+      </div>
+    </section>
+
+    <!-- 6 -->
+    <section id="phimtat">
+      <h2>6. Phím Tắt</h2>
+      <table>
+        <tr><th>Phím tắt</th><th>Chức năng</th></tr>
+        <tr><td><kbd>Ctrl</kbd>+<kbd>F1</kbd></td><td>Mở trang Hướng dẫn sử dụng</td></tr>
+        <tr><td><kbd>F1</kbd></td><td>Trợ giúp theo ngữ cảnh (HelpProvider)</td></tr>
+        <tr><td><kbd>Alt</kbd>+<kbd>F4</kbd></td><td>Thoát chương trình</td></tr>
+        <tr><td><kbd>Enter</kbd></td><td>Xác nhận (trong form đăng nhập)</td></tr>
+      </table>
+    </section>
+
+    <!-- 7 -->
+    <section id="lienhe">
+      <h2>7. Liên Hệ Hỗ Trợ</h2>
+      <div class="card">
+        <p><strong>Trường Đại học An Giang – Khoa Công nghệ thông tin</strong></p>
+        <p>🌐 Website: <a href="https://fit.agu.edu.vn" target="_blank">https://fit.agu.edu.vn</a></p>
+        <p>📧 Email: fit@agu.edu.vn</p>
+        <p>📞 Điện thoại: (0296) 3861 thượng</p>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  © 2024 Khoa Công nghệ thông tin – Trường Đại học An Giang &nbsp;|&nbsp; Phần mềm Quản Lý Bán Hàng v2.0
+</footer>
+
+<script>
+  // Highlight active nav link on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const links = document.querySelectorAll('nav a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 60) current = s.id; });
+    links.forEach(l => {
+      l.classList.toggle('active', l.getAttribute('href') === '#' + current);
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-﻿namespace QuanLyBanHang.Forms
+namespace QuanLyBanHang.Forms
 {
     partial class FrmMain
     {
@@ -55,6 +55,8 @@
             toolStripStatusLabel1 = new ToolStripStatusLabel();
             lblLienKet = new ToolStripStatusLabel();
             menuStrip1.SuspendLayout();
+            helpProvider1 = new HelpProvider();
+            helpProvider1.HelpNamespace = @"..\Help\HuongDanSuDung.html";
             statusStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -202,12 +204,14 @@
             mnuHuongDanSudung.ShortcutKeys = Keys.Control | Keys.F1;
             mnuHuongDanSudung.Size = new Size(281, 26);
             mnuHuongDanSudung.Text = "Hướng dẫn sử dụng";
+            mnuHuongDanSudung.Click += mnuHuongDanSudung_Click;
             // 
             // mnuThongTinPhanMem
             // 
             mnuThongTinPhanMem.Name = "mnuThongTinPhanMem";
             mnuThongTinPhanMem.Size = new Size(281, 26);
             mnuThongTinPhanMem.Text = "Thông tin phần mềm";
+            mnuThongTinPhanMem.Click += mnuThongTinPhanMem_Click;
             // 
             // statusStrip1
             // 
@@ -257,6 +261,9 @@
             menuStrip1.PerformLayout();
             statusStrip1.ResumeLayout(false);
             statusStrip1.PerformLayout();
+
+            helpProvider1.SetHelpKeyword(this, "tongquan");
+            helpProvider1.SetHelpNavigator(this, HelpNavigator.Topic);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -289,5 +296,6 @@
         private ToolStripStatusLabel lblTrangThai;
         private ToolStripStatusLabel toolStripStatusLabel1;
         private ToolStripStatusLabel lblLienKet;
+        private HelpProvider helpProvider1;
     }
 }

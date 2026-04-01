@@ -1,4 +1,4 @@
-﻿namespace QuanLyBanHang.Forms
+namespace QuanLyBanHang.Forms
 {
     partial class FrmHangSanXuat
     {
@@ -44,6 +44,8 @@
             ID = new DataGridViewTextBoxColumn();
             TenHangSanXuat = new DataGridViewTextBoxColumn();
             groupBox1.SuspendLayout();
+            helpProvider1 = new HelpProvider();
+            helpProvider1.HelpNamespace = @"..\Help\HuongDanSuDung.html";
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvHangSanXuat).BeginInit();
             SuspendLayout();
@@ -230,6 +232,9 @@
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvHangSanXuat).EndInit();
+
+            helpProvider1.SetHelpKeyword(this, "hangsanxuat");
+            helpProvider1.SetHelpNavigator(this, HelpNavigator.Topic);
             ResumeLayout(false);
         }
 
@@ -250,5 +255,6 @@
         private DataGridViewTextBoxColumn TenHangSanXuat;
         private Button btnXuat;
         private Button btnNhap;
+        private HelpProvider helpProvider1;
     }
 }

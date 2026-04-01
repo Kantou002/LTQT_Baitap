@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -475,6 +475,19 @@ namespace QuanLyBanHang.Forms
                 }
             }
         }
+        protected override void OnHelpRequested(HelpEventArgs hevent)
+        {
+            string helpFile = Path.Combine(Application.StartupPath, @"Help\HuongDanSuDung.html#sanpham");
+            if (!File.Exists(helpFile))
+                helpFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\Help\HuongDanSuDung.html#sanpham");
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+            {
+                FileName = helpFile,
+                UseShellExecute = true
+            });
+            hevent.Handled = true;
+        }
+
     }
 }
 
